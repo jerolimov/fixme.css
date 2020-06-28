@@ -1,14 +1,13 @@
 # fixme.css
 
-## Use unpkg CDN
+Add the `fixme.css` to your html header and check your website.
+Search for red dashed borders which indicate different HTML issues.
 
-Add the fixme.css to your html header:
+## Use unpkg CDN
 
 ```html
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/fixme.css">
 ```
-
-Check your website and search for red dashed borders which indicate different HTML issues.
 
 ## Alternative hosts which provides the latest css file
 
