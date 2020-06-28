@@ -1,0 +1,112 @@
+:root {
+  --fixme-border: 2px dashed red;
+  --fixme-missing-image-size: 2px dashed orange;
+}
+
+/**
+ * Links without href or links with links to http:// urls.
+ * Inspired by
+ * https://twitter.com/argyleink/status/1274364131928309762
+ */
+a:not([href]), a[href^="http:"] {
+  outline: var(--fixme-border);
+}
+
+/** images */
+img:not([width]), img:not([height]) {
+  outline: var(--fixme-missing-image-size);
+}
+img:not([src]), img[src=""], img:not([alt]), img[alt=""] {
+  outline: var(--fixme-border);
+}
+
+/**
+ * List (ol, ul) allow only li child elements and
+ * li elements must have a ol or ul parent.
+ * Inspired by https://twitter.com/argyleink/status/1274728784659267584
+ */
+ol > :not(li), ul > :not(li), :not(ol):not(ul) > li {
+  outline: var(--fixme-border);
+}
+
+/**
+ * Button without type
+ * Inspired by https://twitter.com/geoffreycrofte/status/1275512621601558529
+ */
+button:not([type]) {
+  outline: var(--fixme-border);
+}
+/**
+ * Button without aria-label
+ * Inspired by https://twitter.com/tanishaaa03/status/1275506267256025088
+ */
+/*
+input[type=button]:not([aria-label]),
+input[type=reset]:not([aria-label]),
+input[type=submit]:not([aria-label]),
+button:not([aria-label]) {
+  outline: var(--fixme-border);
+}
+*/
+
+/**
+ * Figures (figcaption without parent figure)
+ * Inspired by https://twitter.com/argyleink/status/1275430156266602497
+ */
+:not(figure) > figcaption {
+  outline: var(--fixme-border);
+}
+
+/**
+ * Legend (fieldset without parent legend)
+ * Inspired by https://twitter.com/argyleink/status/1275430156266602497
+ */
+:not(fieldset) > legend {
+  outline: var(--fixme-border);
+}
+
+/**
+ * Definitions (dt and dd without parent dl)
+ * Inspired by https://twitter.com/argyleink/status/1275430156266602497
+ */
+:not(dl) > dt, :not(dl) > dd {
+  outline: var(--fixme-border);
+}
+
+/**
+ * Tables (tr without parent table, td without parent table)
+ * Inspired by https://twitter.com/argyleink/status/1275430156266602497
+ */
+/*
+:not(table) > tr, :not(tr) > td {
+  outline: var(--fixme-border);
+}
+*/
+:not(tr) > :is(td, th) {
+  outline: var(--fixme-border);
+}
+:not(table) > :is(thead, tbody, tfood, tr, colgroup, caption) {
+  outline: var(--fixme-border);
+}
+
+/**
+ * Select (option or optgroup without parent select)
+ * Inspired by https://twitter.com/argyleink/status/1275430156266602497
+ */
+:not(select) > option, :not(select) > optgroup {
+  outline: var(--fixme-border);
+}
+
+/**
+ * Block elements inside block or inline element?!
+ * Inspired by https://twitter.com/argyleink/status/1275792544102862849
+ */
+:is(h1, h2, h3, h4, h5, h6, p, div)
+:is(h1, h2, h3, h4, h5, h6, p, div) {
+  outline: var(--fixme-border);
+}
+
+:is(strong, em, b, i, u, q, abbr, cite, code, span, small, big, label)
+:is(h1, h2, h3, h4, h5, h6, p, div) {
+  outline: var(--fixme-border);
+}

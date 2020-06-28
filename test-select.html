@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="fixme.css">
+  </head>
+  <body>
+    <h1>Test select</h1>
+
+    <h2>valid select with option</h2>
+    <select>
+      <option>Value 1</option>
+      <option>Value 2</option>
+      <option>Value 3</option>
+    </select>
+
+    <h2>valid select with optgroup</h2>
+    <select>
+      <optgroup label="Group A">
+        <caption>Group A</caption>
+        <option>Value 1</option>
+        <option>Value 2</option>
+        <option>Value 3</option>
+      </optgroup>
+      <optgroup label="Group B">
+        <option>Value 1</option>
+        <option>Value 2</option>
+        <option>Value 3</option>
+      </optgroup>
+    </select>
+
+    <h2>option without select</h2>
+    <option>Invalid value</option>
+
+    <h2>optgroup without select</h2>
+    <optgroup label="Invalid group" />
+  </body>
+</html>
