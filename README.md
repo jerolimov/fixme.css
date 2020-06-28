@@ -27,8 +27,14 @@ Search for red dashed borders which indicate different HTML issues.
 npm install --save fixme.css
 ```
 
-Add import
+If you use an package which can handle css import:
 
 ```typescript
 import 'fixme.css';
+```
+
+Otherwise you need to copy it to your static/dist folder:
+
+```
+cp node_modules/fixme.css/fixme.css public/
 ```
