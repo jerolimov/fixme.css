@@ -2,6 +2,10 @@
   "name": "fixme.css",
   "version": "0.1.0",
   "description": "",
+  "files": [
+    "README.md",
+    "fixme.css"
+  ],
   "main": "fixme.css",
   "author": "Christoph Jerolimov",
   "license": "MIT"
