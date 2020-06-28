@@ -24,7 +24,7 @@ Search for red dashed borders which indicate different HTML issues.
 ## Or use npm to install it locally
 
 ```bash
-npm install --save
+npm install --save fixme.css
 ```
 
 Add import
